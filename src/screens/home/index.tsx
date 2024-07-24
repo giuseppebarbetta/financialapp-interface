@@ -4,6 +4,7 @@ import logo from '../../assets/logo.svg';
 import { ButtonIcon } from '../../components/button-icon/indesx';
 import { Button } from '../../components/button/indesx';
 import { Card } from '../../components/card';
+import { CreateCategoryDialog } from '../../components/create-category-dialog';
 import { Input } from '../../components/input';
 import { Title } from '../../components/title';
 import { Transaction } from '../../components/transaction';
@@ -20,6 +21,7 @@ import {
   Main,
   SearchTransaction,
   Section,
+  TransactionsGroup,
 } from './styles';
 
 export function Home() {
@@ -29,7 +31,7 @@ export function Home() {
         <Img src={logo} />
         <div>
           <Button>Nova transação</Button>
-          <Button>Nova categoria</Button>
+          <CreateCategoryDialog />
         </div>
       </Header>
       <Main>
@@ -101,14 +103,24 @@ export function Home() {
               <ButtonIcon />
             </SearchTransaction>
           </header>
-          <Transaction
-            id={1}
-            amount={150000}
-            category={{ title: 'Salário', color: '#c1fb72' }}
-            date="23/07/2024"
-            title="Freela"
-            variant="income"
-          />
+          <TransactionsGroup>
+            <Transaction
+              id={1}
+              amount={150000}
+              category={{ title: 'Salário', color: '#c1fb72' }}
+              date="23/07/2024"
+              title="Freela"
+              variant="income"
+            />
+            <Transaction
+              id={1}
+              amount={150000}
+              category={{ title: 'Salário', color: '#c1fb72' }}
+              date="23/07/2024"
+              title="Freela"
+              variant="income"
+            />
+          </TransactionsGroup>
         </Aside>
       </Main>
     </>
