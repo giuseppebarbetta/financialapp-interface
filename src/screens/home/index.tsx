@@ -6,7 +6,9 @@ import { Button } from '../../components/button/indesx';
 import { Card } from '../../components/card';
 import { Input } from '../../components/input';
 import { Title } from '../../components/title';
+import { Transaction } from '../../components/transaction';
 import {
+  Aside,
   Balance,
   ChartAction,
   ChartContainer,
@@ -16,6 +18,7 @@ import {
   Img,
   InputDiv,
   Main,
+  SearchTransaction,
   Section,
 } from './styles';
 
@@ -89,6 +92,24 @@ export function Home() {
             <ChartContent></ChartContent>
           </ChartContainer>
         </Section>
+
+        <Aside>
+          <header>
+            <Title title="Transações" subtitle="Receitas e Gastos no período" />
+            <SearchTransaction>
+              <Input variant="black" placeholder="Procurar transação" />
+              <ButtonIcon />
+            </SearchTransaction>
+          </header>
+          <Transaction
+            id={1}
+            amount={150000}
+            category={{ title: 'Salário', color: '#c1fb72' }}
+            date="23/07/2024"
+            title="Freela"
+            variant="income"
+          />
+        </Aside>
       </Main>
     </>
   );
