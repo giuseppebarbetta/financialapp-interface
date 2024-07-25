@@ -2,9 +2,9 @@ import { InputMask } from '@react-input/mask';
 
 import logo from '../../assets/logo.svg';
 import { ButtonIcon } from '../../components/button-icon/indesx';
-import { Button } from '../../components/button/indesx';
 import { Card } from '../../components/card';
 import { CreateCategoryDialog } from '../../components/create-category-dialog';
+import { CreateTransactionDialog } from '../../components/create-transaction-dialog';
 import { Input } from '../../components/input';
 import { Title } from '../../components/title';
 import { Transaction } from '../../components/transaction';
@@ -30,7 +30,7 @@ export function Home() {
       <Header>
         <Img src={logo} />
         <div>
-          <Button>Nova transação</Button>
+          <CreateTransactionDialog />
           <CreateCategoryDialog />
         </div>
       </Header>
