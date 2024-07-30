@@ -3,8 +3,10 @@ import { InputMask } from '@react-input/mask';
 import logo from '../../assets/logo.svg';
 import { ButtonIcon } from '../../components/button-icon/indesx';
 import { Card } from '../../components/card';
+import { CategoriesPieChart } from '../../components/categories-pie-chart';
 import { CreateCategoryDialog } from '../../components/create-category-dialog';
 import { CreateTransactionDialog } from '../../components/create-transaction-dialog';
+import { FinancialEvolutionBarChart } from '../../components/financial-evolution-bar-chart';
 import { Input } from '../../components/input';
 import { Title } from '../../components/title';
 import { Transaction } from '../../components/transaction';
@@ -70,7 +72,9 @@ export function Home() {
                 subtitle="Despesas por categoria no período"
               />
             </header>
-            <ChartContent></ChartContent>
+            <ChartContent>
+              <CategoriesPieChart />
+            </ChartContent>
           </ChartContainer>
 
           <ChartContainer>
@@ -91,7 +95,9 @@ export function Home() {
                 <ButtonIcon />
               </ChartAction>
             </header>
-            <ChartContent></ChartContent>
+            <ChartContent>
+              <FinancialEvolutionBarChart />
+            </ChartContent>
           </ChartContainer>
         </Section>
 
