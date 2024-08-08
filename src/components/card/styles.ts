@@ -29,7 +29,7 @@ export const Container = styled.div<ContainerProps>`
   span {
     font-size: 1rem;
     font-weight: 300;
-    color: ${(props) => variantColorMap[props.$variant]};
+    color: ${theme.colors.neutral};
   }
 
   strong {
